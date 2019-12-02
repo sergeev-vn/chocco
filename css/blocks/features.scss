@@ -1,0 +1,146 @@
+.features {
+    margin-top: rem(31px);
+
+    @include phones {
+       margin-top: rem(58.4px);
+    }
+}
+
+.features__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include tablets {
+        flex-direction: column;
+    }
+}
+
+.features__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 29%;
+    position: relative;
+
+    @include tablets {
+        width: rem(394px);
+        margin-top: rem(27px);
+    }
+
+    @include phones {
+        flex-direction: row;
+        width: rem(464px);
+        margin-top: rem(48px);
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        @include tablets {
+            margin-bottom: rem(20.4px);
+        }
+    }
+
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: rem(67px);
+        height: rem(21px);
+        top: 19%;
+        right: -24%;
+        background-image: url('../img/bg/gray-circles.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        @include tablets {
+           background: none;;
+        }
+    }
+
+    &:last-child:after {
+        display: none;
+    }
+}
+
+.features__pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(125px);
+    height: rem(125px);
+    background: #f2f5f4;
+    border-radius: 50%;
+
+
+    @include phones {
+        flex: 0 0 auto;
+        margin-right: rem(17px);
+    }
+
+}
+
+.features__health-icon,
+.features__yummy-icon,
+.features__nutrition-icon {
+    fill: none;
+    stroke: #2a2a29;
+    stroke-width: 0.75;
+    stroke-miterlimit: 10;
+}
+
+.features__health-icon {
+    width: rem(66px);
+    height: rem(69px);
+}
+
+.features__yummy-icon {
+    width: rem(70px);
+    height: rem(69px);
+}
+
+.features__nutrition-icon  {
+    width: rem(75px);
+    height: rem(64px);
+  }
+
+.features__title {
+    font-size: rem(27px);
+    font-weight: 600;
+    color: #000;
+    margin-top: rem(35px);
+    text-align: center;
+
+    @include tablets {
+        margin-top: rem(18.6px)
+    }
+
+    @include phones {
+        text-align: left;
+        font-size: rem(29px);
+        margin-top: 0;
+    }
+}
+
+.features__text {
+    font-weight: 200;
+    color: $gray;
+    font-size: rem(18px);
+    text-align: center;
+    margin-top: rem(25px);
+
+    @include tablets {
+        margin-top: rem(6.4px)
+    }
+
+    @include phones {
+        text-align: left;
+        font-size: rem(19px);
+        margin-top: rem(16px);
+    }
+
+}

@@ -1,0 +1,31 @@
+.menu {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-image: url('../img/bg/menu-cookie.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: rem(93.6px) rem(38.4px);
+
+    @include tablets {
+        min-height: rem(913px);
+    }
+
+    @include phones {
+        min-height: rem(637px);
+     }
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: #000000;
+        opacity: 0.2;
+        z-index: 1;
+    }
+}

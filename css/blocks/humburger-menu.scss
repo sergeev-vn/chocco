@@ -1,0 +1,28 @@
+.humburger-menu {
+    display: none;
+
+    @include tablets {
+        display: flex;
+    }
+}
+
+.hamburger-menu__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: rem(26px);
+    min-height: 100%;
+}
+
+.humburger-menu__row {
+    width: 100%;
+    min-height: rem(5px);
+    background-color: $white;
+    border-radius: 3px;
+    margin-bottom: rem(4.5px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

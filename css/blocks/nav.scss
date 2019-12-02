@@ -1,0 +1,26 @@
+.nav {
+    @include tablets {
+        display: none;
+    }
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 rem(10px) ;
+    justify-content: center;
+}
+
+.nav__item {
+    margin-right: rem(27px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.nav__link {
+    color: $white;
+    font-size: rem(18px);
+}

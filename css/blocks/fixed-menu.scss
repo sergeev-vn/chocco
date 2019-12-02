@@ -1,0 +1,44 @@
+.fixed-menu {
+    position: fixed;
+    top: 33.5%;
+    right: 2.7%;
+    z-index: 2;
+
+    @include tablets {
+        display: none;
+    }
+
+}
+
+.fixed-menu__dot {
+    display: block;
+    width: rem(16px);
+    height: rem(16px);
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin-bottom: rem(5.3px);
+    position: relative;
+
+    &:before {
+        content: '';
+        width: rem(6px);
+        height: rem(6px);
+        background-color: $white;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0px 7px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    &--active {
+        border: 1px solid $white;
+        box-shadow: 0 0px 7px 2px rgba(0, 0, 0, 0.3);
+
+        &:before {
+            box-shadow: 0 0px 3px 1px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+}

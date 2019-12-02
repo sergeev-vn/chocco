@@ -1,0 +1,28 @@
+.map {
+    display: flex;
+
+    @include tablets {
+        min-height: rem(638px);
+    }
+
+    @include phones {
+        min-height: rem(694px);
+    }
+}
+
+.map__content {
+    width: 100%;
+    height: 100%;
+    margin-bottom: rem(95px);
+
+    @include phones {
+        margin-bottom: rem(163.13px);
+    }
+}
+
+.map__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
