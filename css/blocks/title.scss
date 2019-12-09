@@ -30,12 +30,12 @@
     @include tablets {
         text-align: center;
         font-size: rem(30px);
-        margin-top: 0;
-        max-width: 55%;
+        margin-top: rem(25px);
+        max-width: 80%;
     }
 
     @include phones {
         max-width: 76%;
-        margin-top: 15%;
+        margin-top: 7%;
 }
 }

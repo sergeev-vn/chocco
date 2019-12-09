@@ -1,29 +1,42 @@
+.page-slider {
+    background-color: #f8faf9;
+    // background-color: red;
+    background-image: url('../img/bg/slider-fern.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+
+    @include tablets {
+        min-height: rem(815px);
+        position: relative;
+    }
+
+    @include phones {
+        min-height: rem(800px);
+        height: 800px;
+        position: relative;
+    }
+}
+
 .slider {
-background-color: #f8faf9;
-background-image: url('../img/bg/slider-fern.png');
-background-repeat: no-repeat;
-background-position: right bottom;
+    display: flex;
+    max-width: 940px;
+    width: 100%;
 
-@include tablets {
-    min-height: rem(815px);
-    position: relative;
-}
-
-@include phones {
-    min-height: rem(800px);
-    height: 800px;
-    position: relative;
-}
-
+    @include tablets {
+        min-width: 100%;
+    }
 }
 
 .slider__container {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 95%;
+    position: relative;
 
     @include tablets {
         max-width: 595px;
+        position: static;
     }
 
     @include phones {
@@ -32,21 +45,9 @@ background-position: right bottom;
 
 }
 
-.slider__content {
-    display: flex;
-    position: relative;
-    min-width: 940px;
-    width: 100%;
-    height: rem(480px);
-    
-    @include tablets {
-        min-width: 100%;
-        height: 100%;
-    }
-}
-
 .slider__list {
     display: flex;
+    width: 100%;
 }
 
 .slider__item {
@@ -61,35 +62,46 @@ background-position: right bottom;
     display: flex;
     flex-direction: column;
 
+    @include tablets {
+        align-items: center;
+    }
+
     &:first-child {
-        padding: 44px 71px 29px 4px;
-        flex-basis: 58.2%;
+        margin-right: rem(63px);
 
         @include tablets {
-            padding: 68px 96px 27px 96px;
-            flex-basis: 45%;
+            margin-right: 0;
         }
 
-        @include phones {
-            padding: 45px 45px 0 45px;
-            flex-basis: 45%;
-        }
-
-
+        // @include phones {
+        //     padding: 74px 45px 0 45px;
+        //     flex-basis: 45%;
+        // }
     }
 
     &:last-child {
         flex: 1;
 
-        @include tablets {
-            align-items: center;
-        }
-
+        // @include tablets {
+        //     align-items: center;
+        // }
     }
 }
 
 .slider__about {
     display: flex;
+    position: relative;
+
+    @include tablets {
+        position: absolute;
+        top: 2.9%;
+        right: 1%;
+    }
+
+    @include phones {
+        top: 1.2%;
+        right: 1%;
+    }
 }
 
 .slider__pic {
@@ -99,20 +111,16 @@ background-position: right bottom;
     align-items: center;
 
     @include tablets {
-        flex: none;
+        max-width: 65%;
     }
-
 
     @include phones {
-        flex: none;
+        max-width: 86%;
     }
-
-
 }
 
 .slider__img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
 }
 
 .slider__desc-text {
@@ -150,11 +158,12 @@ background-position: right bottom;
 }
 
 .slider__order {
-    display: flex;
     margin-top: rem(32px);
+    display: flex;
 
     @include tablets {
         justify-content: center;
+        margin-top: rem(40px);
     }
 
 }
@@ -164,57 +173,5 @@ background-position: right bottom;
     line-height: 1;
     font-weight: 200;
     margin-right: 30px;
-}
-
-.slider_arrow {
-    position: absolute;
-    display: block;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 18px;
-    height: 35px;
-
-    @include tablets {
-        top: 23%;
-        transform: none;
-}
-
-    @include phones {
-        top: 30%;
-        transform: translateY(-50%);
-}
-
-    &--left {
-        left: -2.2%;
-
-        @include tablets {
-            left: 11%;
-    }
-
-    @include phones {
-        left: -2.2%;
-}
-
-    }
-
-    &--right {
-        right: 0;
-
-        @include tablets {
-            right: 11%;
-    }
-    @include phones {
-        right: 0%;
-}
-    }
-}
-
-.slider__arrow-icon {
-    stroke: #0d0d0d;
-    stroke-width: 2px;
-    stroke-linecap: butt;
-    stroke-linejoin: miter;
-    fill: none;
-    width: 100%;
-    height: 100%;
+    flex-shrink: 0;
 }

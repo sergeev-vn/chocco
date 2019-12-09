@@ -24,6 +24,10 @@
     background-color: $green;
     color: $white;
     box-shadow: none;
+
+    &:hover {
+        background-color: #0b4d3c;
+    }
 }
 
 .btn-reset {
