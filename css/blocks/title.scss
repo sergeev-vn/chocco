@@ -21,3 +21,21 @@
 .title--green {
     color: $green;
 }
+
+.title--small-size {
+    font-size: rem(36px);
+    text-align: left;
+    margin-top: rem(30px);
+
+    @include tablets {
+        text-align: center;
+        font-size: rem(30px);
+        margin-top: 0;
+        max-width: 55%;
+    }
+
+    @include phones {
+        max-width: 76%;
+        margin-top: 15%;
+}
+}

@@ -2,7 +2,7 @@
     display: inline-block;
     background-color: $white;
     border-radius: 1.875rem;
-    padding: 1.1rem 2.15rem;
+    padding: 20px 35px;
     font-weight: 500;
     text-transform: uppercase;
     color: $green;
@@ -11,8 +11,8 @@
     outline: none;
     border: none;
     cursor: pointer;
+    line-height: 1;
 
-    
     @include phones {
         font-size: rem(21.5px);
         padding: 1.1rem 2.15rem;
@@ -23,7 +23,7 @@
 .btn--green {
     background-color: $green;
     color: $white;
-    box-shadow: none
+    box-shadow: none;
 }
 
 .btn-reset {
