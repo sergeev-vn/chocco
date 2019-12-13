@@ -30,6 +30,7 @@
     background-color: #00accf;
     cursor: pointer;
     position: relative;
+    outline: none;
     transition: background-color .3s;
     &:hover {
         background-color: #61c4d9;

@@ -21,7 +21,7 @@
     display: flex;
     max-width: 940px;
     width: 100%;
-
+  
     @include tablets {
         min-width: 100%;
     }
@@ -48,14 +48,26 @@
 .slider__list {
     display: flex;
     width: 100%;
+    height: 100%;
 }
 
 .slider__item {
-    display: flex;
+    display: inline-flex !important;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    outline: none;
 
     @include tablets {
         flex-direction: column;
     }
+}
+
+.slick-list,
+.slick-track,
+.slick-slide,
+.slick-slide > div  {
+    height: 100%;
 }
 
 .slider__col {
@@ -160,7 +172,7 @@
 .slider__order {
     margin-top: rem(32px);
     display: flex;
-
+    flex-wrap: wrap;
     @include tablets {
         justify-content: center;
         margin-top: rem(40px);

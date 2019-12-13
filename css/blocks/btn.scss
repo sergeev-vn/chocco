@@ -21,12 +21,12 @@
 }
 
 .btn--green {
-    background-color: $green;
+    background-color: #0b4d3c;
     color: $white;
     box-shadow: none;
 
     &:hover {
-        background-color: #0b4d3c;
+        background-color: $green;
     }
 }
 

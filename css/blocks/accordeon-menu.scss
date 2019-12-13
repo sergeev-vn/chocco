@@ -46,8 +46,7 @@
 
 
     
-    &--active,
-    &:hover {
+    &--active {
 
         @include phones {
             position: absolute;
@@ -134,7 +133,7 @@
 }
 
 .accordeon-menu__btn-close {
-    display: block;
+    display: none;
     width: rem(18px);
     height: rem(18px);
     position: absolute;
