@@ -84,7 +84,7 @@
         justify-content: space-between;
         margin-left: -20px;
         margin-top: rem(34px);
-
+        margin-bottom: 0;
     }
 
     @include phones {
@@ -105,7 +105,7 @@
     margin-top: rem(21px);
 
     @include phones {
-       width: rem(180px);
+      // width: rem(180px);
        margin-top: rem(11.4px);
        font-size: rem(21.5px);
  }
@@ -154,13 +154,13 @@
     }
 
     @include phones {
-        width: rem(152px);
+        
         margin-bottom: rem(42.8px);
  }
 
     &--active {
         .team__info {
-            max-height: rem(100px);
+            max-height: rem(116px);
         }
 
         .team__name {

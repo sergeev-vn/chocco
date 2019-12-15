@@ -1,4 +1,3 @@
-
 //humburger-menu
 const humburger_btn = document.querySelector('#hamburger-menu__link');
 const humburger_menu = document.querySelector('.nav');
@@ -41,56 +40,19 @@ const teamItems = document.querySelectorAll('.team__item');
     });
 
 //accordion-menu
-//  const accordeonMenu = document.querySelector('.accordeon-menu').children;
-//  const accordeonItem = document.querySelector('.accordeon-menu__item');
-//  const accordeonBtn = document.querySelector('.accordeon-menu__btn');
+const menu = document.querySelector('.menu');
+const menuItem = document.querySelector('.accordeon-menu').children;
+const btnCloseX = document.querySelectorAll('.btn-close-x');
 
-//  accordeonMenu.addEventListener('click', function(e) {
-//     e.preventDefault();
-//     console.log('click');
-//  })
-
-
-//     [].forEach.call(accordionBtn, accordionItems, function(el) {
-//         el.addEventListener('click', function(e) {
-//             e.preventDefault();
-
-//             // console.log(accordionItems);
-//             });
-//     });
-            
-
-            //   if (!ell.classList.contains('accordeon-menu__item--active')) {
-            //     console.log(accordionItems[2]);
-
-
-            //     // for (let i = 0; i < accordionItems.length; i++) {
-            //     //      accordionItems[i].classList.remove('accordeon-menu__item--active');
-            //     //      console.log(accordionItems[i]);
-            //     //          }
-            //     // ell.classList.add('accordeon-menu__item--active');
-            //  } 
-            //  else {
-            //     accordionItems.classList.remove('accordeon-menu__item--active');
-            //  }
-        
-           
-
-  
-
- const menuAcc = document.querySelector('.menu');
-const ulMenuAcc = document.querySelector('.accordeon-menu').children;
-
-menuAcc.addEventListener('click', function (e) {
+menu.addEventListener('click', function (e) {
   e.preventDefault();
 
   if (e.target.closest('a')) {
     let li = e.target.closest('li');
 
     if (!li.classList.contains("accordeon-menu__item--active")) {
-      for (i = 0; i < ulMenuAcc.length; i++) {
-        ulMenuAcc[i].classList.remove('accordeon-menu__item--active');
-        // console.log(ulMenuAcc[i])
+      for (i = 0; i < menuItem.length; i++) {
+        menuItem[i].classList.remove('accordeon-menu__item--active');
       }
       li.classList.add('accordeon-menu__item--active');
     } else {
@@ -172,31 +134,30 @@ function ready() {
 document.addEventListener('DOMContentLoaded', ready);
 
 //form
-
 const myForm = document.querySelector('.form');
 const btnForm = document.querySelector('#btn-order');
+const overlay = document.querySelector('.overlay');
+const btnClose = document.querySelector('#btn-close');
 
 btnForm.addEventListener('click', event => {
     event.preventDefault();
 
     if (validateForm(myForm)) {
         let formData = new FormData(myForm);
-
-        // formData.append('name', myForm.elements.name.value);
-        // formData.append('phone', myForm.elements.phone.value);
-        // formData.append('comment', myForm.elements.comment.value);
         formData.append('to', 'test@test.ru');
 
-        console.log(formData);
         const xhr = new XMLHttpRequest();
         xhr.responseType = 'json';
-         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-         xhr.send(JSON.stringify(formData));
-        //xhr.addEventListener('load', () => {
-         //   console.log(xhr.response);
-       // });
-    }
+        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+        xhr.send(formData);
+        xhr.addEventListener('load', () => {
+           const successOverlay = createOverlay(xhr.response.message);
+           document.body.appendChild(successOverlay);
 
+             var _body = document.getElementsByTagName('body')[0];
+             _body.style.overflow = "hidden"; 
+        });
+    }
 });
 
 function validateForm(form) {
@@ -217,5 +178,71 @@ function validateForm(form) {
 
 function validateField(field) {
     field.nextElementSibling.textContent = field.validationMessage;
+    field.style.border = '1px solid red';
+
+    if (field.validationMessage) {
+        field.style.border = '1px solid red';
+    } else {
+        field.style.border = '';
+    }
+    
     return field.checkValidity();
 }
+
+//overlay
+function createOverlay(content) {
+  const overlayElement = document.createElement("div");
+  overlayElement.classList.add("overlay");
+
+  const template = document.querySelector("#overlayTemplate");
+  overlayElement.innerHTML = template.innerHTML;
+
+  const closeElement = overlayElement.querySelector("#btn-close");
+  closeElement.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.body.removeChild(overlayElement);
+
+    var _body = document.getElementsByTagName('body')[0];
+    _body.style.overflow = "visible"; 
+
+  });
+
+
+  overlayElement.addEventListener("click", function(e) {
+    if (e.target === overlayElement) {
+      closeElement.click();
+    }
+  });
+
+  const contentElement = overlayElement.querySelector(".overlay__text");
+  contentElement.innerHTML = content;
+
+  return overlayElement;
+}
+
+
+//slideshow
+const ctrlList = document.querySelector('.reviews__ctrl');
+const ctrlItems = document.querySelectorAll('.reviews__ctrl-item');
+const reviewItems = document.querySelectorAll('.reviews__info-item');
+
+
+[].forEach.call(ctrlItems, (el) => {
+    el.addEventListener('click', (e) => {
+        e.preventDefault();
+        let ctrlItem = e.target.closest('li');
+
+        for (let i = 0; i < ctrlItems.length; i++) {
+            ctrlItems[i].classList.remove('reviews__ctrl-item--active');
+    
+            if (ctrlItems[i] === ctrlItem) {
+                reviewItems[i].classList.add('reviews__info-item--active');
+                
+            } else {
+                reviewItems[i].classList.remove('reviews__info-item--active');
+            }
+        }
+        ctrlItem.classList.add('reviews__ctrl-item--active');
+
+    })
+})

@@ -17,6 +17,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        min-height: rem(896px);
     }
 
     &::before {
@@ -48,7 +49,7 @@
 
 
     @include phones {
-        padding: 0;
+        padding: 0 2%;
     }
 
 }

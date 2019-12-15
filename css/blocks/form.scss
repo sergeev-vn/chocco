@@ -32,6 +32,11 @@
         margin-left: 0;
         min-width: rem(460px);
     }
+    @include phones {
+        width: 100%;
+        min-width: 100%;
+        max-width: rem(444px);
+    }
 }
 .form__row {
     display: flex;
@@ -187,3 +192,9 @@
 .checkbox__elem:checked + .checkbox__content .checkbox__check::after {
         opacity: 1;
     }
+
+.input__error,
+.textarea__error {
+    color: red;
+    margin-top: 4px;
+}

@@ -450,7 +450,7 @@
             <section class="section menu">
                 <h2 class="title title--white">Меню</h2>
                  <ul class="accordeon-menu">
-                    <li class="accordeon-menu__item accordeon-menu__item--active">
+                    <li class="accordeon-menu__item ">
                             <a href="#" class="accordeon-menu__btn" style="background-image: url('./img/bg/menu-bars.jpg');">
                             <span class="accordeon-menu__btn-title">Батончики с молоком</span>
                         </a>
@@ -458,9 +458,11 @@
                                 <div class="accordeon-menu__desc">Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. 
                                         Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
                                         </div>
-                                <a href="#" class="accordeon-menu__btn-close">
-                                    <img src="./img/bg/menu-close.png" alt="Закрыть">
-                                </a>
+                                        <a href="#" class="btn-close-x">
+                                            <svg class="btn-close-x__icon">
+                                                <use xlink:href="./img/icons/sprite.svg#btn-close"></use>
+                                            </svg>
+                                        </a>
                         </div>
                     </li>
                     <li class="accordeon-menu__item">
@@ -471,9 +473,11 @@
                                 <div class="accordeon-menu__desc">Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. 
                                         Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
                                         </div>
-                                        <a href="#" class="accordeon-menu__btn-close">
-                                                <img src="./img/bg/menu-close.png" alt="Закрыть">
-                                            </a>
+                                        <a href="#" class="btn-close-x">
+                                            <svg class="btn-close-x__icon">
+                                                <use xlink:href="./img/icons/sprite.svg#btn-close"></use>
+                                            </svg>
+                                        </a>
                         </div>
                     </li>
                     <li class="accordeon-menu__item">
@@ -484,9 +488,11 @@
                                 <div class="accordeon-menu__desc">Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. 
                                         Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
                                         </div>
-                                        <a href="#" class="accordeon-menu__btn-close">
-                                                <img src="./img/bg/menu-close.png" alt="Закрыть">
-                                            </a>
+                                        <a href="#" class="btn-close-x">
+                                            <svg class="btn-close-x__icon">
+                                                <use xlink:href="./img/icons/sprite.svg#btn-close"></use>
+                                            </svg>
+                                        </a>
                         </div>
                     </li>
                 </ul>
@@ -530,17 +536,15 @@
                         </li>
                         <li class="reviews__info-item">
                             <div class="reviews__info-avatar">
-                                <img src="./img/content/avatar.png" alt="Аватар" class="reviews__info-pic">
+                                <img src="./img/content/avatar_preview_3.png" alt="Аватар" class="reviews__info-pic">
                             </div>
                             <div class="reviews__info-text">
-                                <h3 class="reviews__info-title">Лучший перекус</h3>
+                                <h3 class="reviews__info-title">Идеально подходят для спортсменов</h3>
                                 <div class="reviews__info-comment">
-                                        Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером
-                                        и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно<br>
-                                        и удобно.
+                                    После тренировок всегда хочется быстро закинуться чем-то белковым, потому что до дома ещё нужно доехать. А кушать хочется. Протеиновые батончики всегда выручают в этом плане. Спасибо производителю за этот качественный и экологичный продукт. 
                                 </div>
                                 <div class="reviews__info-name">
-                                        Алёна Хмельницкая
+                                    Вадим Грачев
                                 </div>
                             </div>
                         </li>
@@ -656,14 +660,13 @@
             </section>
 
             <section class="section map">
-                <div class="map__content" id="map" >
-                       
+                <div class="map__content" id="map">
                 </div>
                 <footer class="footer">
                     <div class="container footer__container">
                         <div class="contacts">
                             <address class="contacts__address">
-                                    Москва, ул. Новый Арбат, д.31/12
+                                    Новосибирск, ул. Красный проспект, д.31/12
                             </address>
                             <div class="phone phone--green">
                                     <a href="tel:+78009039090" class="phone__number phone__number--green">
@@ -738,6 +741,13 @@
                     <a href="#" class="fixed-menu__dot" aria-label="Контакты"></a>
                 </li>
             </ul>
+
+            <script type="template" id="overlayTemplate">
+                <div class="overlay__container">
+                  <div class="overlay__text"></div>
+                  <a href="#" class="btn btn--green" id="btn-close">Закрыть</a>
+                </div>
+            </script>
     </div>
 <script src="./js/jquery-3.4.1.min.js"></script>
 <script src="./js/slick.min.js"></script>

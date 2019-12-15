@@ -24,6 +24,7 @@
 
     @include phones {
         width: 100%;
+        transition: none;
     }
 
 
@@ -130,13 +131,4 @@
         font-size: rem(38px);
       }
 
-}
-
-.accordeon-menu__btn-close {
-    display: none;
-    width: rem(18px);
-    height: rem(18px);
-    position: absolute;
-    top: rem(26px);
-    right: rem(32px);
 }

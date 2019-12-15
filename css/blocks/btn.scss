@@ -40,3 +40,21 @@
     cursor: pointer;
     margin-left: rem(19px);
 }
+
+.btn-close-x {
+    display: none;
+    position: absolute;
+    top: rem(26px);
+    right: rem(22px);
+
+    @include phones {
+        display: block;
+    }
+}
+
+.btn-close-x__icon {
+    fill: #fff;
+    opacity: 0.7;
+    width: 18px;
+    height: 18px;
+}
