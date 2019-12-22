@@ -4,6 +4,10 @@
     }
 }
 
+.nav--fixed {
+    display: none;
+}
+
 .nav__list {
     display: flex;
     align-items: center;
@@ -54,7 +58,7 @@
             margin-bottom: rem(34px);
         }
 
-        &::last-child {
+        &:last-child {
             margin-bottom: 0;
         }
     }

@@ -1,6 +1,6 @@
 //humburger-menu
 const humburger_btn = document.querySelector('#hamburger-menu__link');
-const humburger_menu = document.querySelector('.nav');
+const humburger_menu = document.querySelector('.nav--fixed');
 
     humburger_btn.addEventListener('click', function(e) {
     e.preventDefault();
@@ -22,6 +22,11 @@ const humburger_menu = document.querySelector('.nav');
     }
     });
 
+
+    $('.nav__link').on('click', () => {
+        $('.nav--fixed').removeClass('nav--active');
+        $('#hamburger-menu__link').removeClass('hamburger-menu--link--active');
+    });
 //accordeon-team
 const teamItems = document.querySelectorAll('.team__item');
 
@@ -84,7 +89,7 @@ function ready() {
     //map
     ymaps.ready(init);
     function init() {
-        var myMap = new ymaps.Map("map", {
+        var myMap = new ymaps.Map("map-yandex", {
             center: [55.022, 82.93],
             zoom: 12.4,
             controls: ['zoomControl']
