@@ -1,6 +1,6 @@
 .promo {
    background-color: #61c4d9;
-   background-image: url('../img/bg/chocolates.png'), url('../img/bg/fern.png');
+   background-image: url('../../img/bg/chocolates.png'), url('../../img/bg/fern.png');
    background-repeat: no-repeat, no-repeat;
    background-size:  auto, contain;
    background-position: 96% 44%, right bottom;
@@ -8,8 +8,8 @@
 
    @include tablets {
       background-image: url('../img/bg/promo-berries-768.png'),
-      url('../img/bg/chocolates.png'),
-      url('../img/bg/fern.png');
+      url('..../img/bg/chocolates.png'),
+      url('../../img/bg/fern.png');
       background-repeat: no-repeat, no-repeat, no-repeat;
       background-position: 48% 31%, center 9%, right top;
       background-size: 55%, 54%, 66%;
