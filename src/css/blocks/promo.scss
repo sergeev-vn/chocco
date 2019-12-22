@@ -1,15 +1,15 @@
 .promo {
    background-color: #61c4d9;
-   background-image: url('/img/bg/chocolates.png'), url('/img/bg/fern.png');
+   background-image: url('img/bg/chocolates.png'), url('img/bg/fern.png');
    background-repeat: no-repeat, no-repeat;
    background-size:  auto, contain;
    background-position: 96% 44%, right bottom;
    position: relative;
 
    @include tablets {
-      background-image: url('../img/bg/promo-berries-768.png'),
-      url('../../img/bg/chocolates.png'),
-      url('../../../img/bg/fern.png');
+      background-image: url('img/bg/promo-berries-768.png'),
+      url('img/bg/chocolates.png'),
+      url('img/bg/fern.png');
       background-repeat: no-repeat, no-repeat, no-repeat;
       background-position: 48% 31%, center 9%, right top;
       background-size: 55%, 54%, 66%;
@@ -26,7 +26,7 @@
       position: absolute;
       width: rem(59px);
       height: rem(112px);
-      background-image: url('../../img/bg/left-leaf.png');
+      background-image: url('img/bg/left-leaf.png');
       background-repeat: no-repeat;
       background-position: center center;
       bottom: -4rem;
@@ -42,7 +42,7 @@
       position: absolute;
       width: rem(460px);
       height: rem(341px);
-      background-image: url('../img/bg/right-leaves-and-berry.png');
+      background-image: url('img/bg/right-leaves-and-berry.png');
       background-repeat: no-repeat;
       background-position: center center;
       bottom: -3rem;

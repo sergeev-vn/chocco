@@ -1,8 +1,8 @@
 .delivery {
     background-color: #cfdeda;
-    background-image: url('../../img/bg/form-leaf.png'),
-    url('../../img/bg/form-berries.png'),
-    url('../../img/bg/form-pattern.png');
+    background-image: url('img/bg/form-leaf.png'),
+    url('img/bg/form-berries.png'),
+    url('img/bg/form-pattern.png');
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: auto, auto, cover;
     background-position: 99% 82%, 2% 86%, center;
@@ -13,7 +13,7 @@
 
     @include phones {
         min-height: rem(768px);
-        background-image: url('../../img/bg/form-pattern.png');
+        background-image: url('img/bg/form-pattern.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -24,7 +24,7 @@
         position: absolute;
         width: rem(197px);
         height: rem(264px);
-        background-image: url('../../img/bg/form-blackberry.png');
+        background-image: url('img/bg/form-blackberry.png');
         background-repeat: no-repeat;
         background-position: center center;
         top: -10rem;

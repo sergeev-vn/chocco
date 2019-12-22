@@ -14897,7 +14897,7 @@ function ready() {
             hintContent: 'Магазин 1',
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '../img/icons/map-icon.png',
+            iconImageHref: 'img/icons/map-icon.png',
             iconImageSize: [46, 57],
         }),
         
@@ -14905,7 +14905,7 @@ function ready() {
             hintContent: 'Магазин 2',
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '../img/icons/map-icon.png',
+            iconImageHref: 'img/icons/map-icon.png',
             iconImageSize: [46, 57],
         }),
         
@@ -14913,7 +14913,7 @@ function ready() {
             hintContent: 'Магазин 3',
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '../img/icons/map-icon.png',
+            iconImageHref: 'img/icons/map-icon.png',
             iconImageSize: [46, 57],
         }),
 
@@ -14921,7 +14921,7 @@ function ready() {
             hintContent: 'Магазин 4',
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '../img/icons/map-icon.png',
+            iconImageHref: 'img/icons/map-icon.png',
             iconImageSize: [46, 57],
         });
 

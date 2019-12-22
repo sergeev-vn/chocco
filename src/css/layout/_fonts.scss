@@ -1,4 +1,4 @@
-$AlegreyaSansFontPath: '../fonts';
+$AlegreyaSansFontPath: 'fonts';
 $AlegreyaSansFontFamily: 'AlegreyaSans';
 
 @mixin font-face($fontFamily, $fileName, $fontWeight, $fontStyle, $fontPath: $AlegreyaSansFontPath) {
@@ -35,7 +35,7 @@ $AlegreyaSansFontFamily: 'AlegreyaSans';
 @font-face {
     font-family: Museo;
     src: local('Museo_Sans'),
-    url('../fonts/Museo_Sans_Cyrl_500.ttf') format('truetype');
+    url('fonts/Museo_Sans_Cyrl_500.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }

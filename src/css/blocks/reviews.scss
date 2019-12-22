@@ -1,5 +1,5 @@
 .reviews {
-    background-image: url('../img/bg/reviews-strawberries.png');
+    background-image: url('img/bg/reviews-strawberries.png');
     background-repeat: no-repeat;
     background-position: 98% 5%;
     position: relative;
@@ -34,7 +34,7 @@
         content: '';
         display: block;
         position: absolute;
-        background-image: url('../img/bg/reviews-left-berries.png');
+        background-image: url('img/bg/reviews-left-berries.png');
         background-repeat: no-repeat;
         width: rem(139px);
         height: rem(321px);
@@ -86,7 +86,7 @@
     display: flex;
      background-color: #f8faf9;
     padding: rem(51px) rem(187px) rem(34.6px) rem(45.7px);
-    background-image: url('../img/bg/reviews-pattern.png');
+    background-image: url('img/bg/reviews-pattern.png');
     background-repeat: no-repeat;
     background-position: right top;
     box-shadow: 0px 13px 30px 0px rgba(145, 169, 157, 0.17);
