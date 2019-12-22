@@ -1,0 +1,16 @@
+.footer {
+    width: 100%;
+    padding: rem(21px) 0;
+    background-color: #fff;
+    padding: rem(33px) 0;
+    }
+
+
+.footer__container {
+    display: flex;
+    align-items: center;
+    
+    @include phones {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,233 @@
+.page-video {
+    background-color: #f8faf9;
+    background-image: url('../img/bg/video-right-leaf.png'), url('../img/bg/video-left-leaf.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 89% 16%, 7% 89%;
+    position: relative;
+
+    @include tablets {
+        min-height: rem(613px);
+        background-position: 95% 25%, 0% 70%;
+        background-size: rem(55px);
+     }
+
+     @include phones {
+        min-height: rem(510px);
+     }
+
+}
+
+.video {
+    max-width: rem(660px);
+    max-height: rem(405px);
+    margin-top: rem(35px);
+
+    @include tablets {
+        max-width: rem(591px);
+        max-height: rem(363px);
+     }
+
+     @include phones {
+        max-width: rem(421px);
+        max-height: rem(296px);
+     }
+
+}
+
+.video__player {
+    width: 100%;
+    outline: none;
+    display: block;
+    position: relative;
+}
+
+.video__controls {
+    width: 100%;
+    height: rem(35px);
+    background-color: #3e3e3e;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: rem(10px);
+}
+
+.btn-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.btn-play--big {
+    position: absolute;
+    opacity: 0.9;
+    top: 52.5%;
+    left: 51.6%;
+    transform: translate(-50%, -50%);
+    max-width: rem(200px);
+    max-height: rem(200px);
+    height: 100%;
+    width: 100%;
+
+    @include tablets {
+        left: 52.6%;
+        top: 56.5%;
+     }
+
+    @include phones {
+        max-width: rem(140px);
+        max-height: rem(140px);
+        left: 53.1%;
+        top: 54.5%;
+     }
+
+    .btn-play__icon {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: white;
+        
+        &:hover {
+            fill: white;
+        }
+    }
+}
+
+
+.btn-play__icon {
+    display: block;
+    height: rem(35px);
+    width: rem(35px);
+    fill: #626262;
+    transition: fill .3s;
+
+    &:hover {
+    fill: #d7d7d7;
+    }
+}
+
+.btn-pause__icon {
+    display: none;
+    height: rem(18px);
+    width: rem(35px);
+    fill: #626262;
+    transition: fill .3s;
+
+    &:hover {
+    fill: #d7d7d7;
+    }
+}
+
+.video__progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    max-width: rem(444px);
+    width: 100%;
+    height: 100%;
+    background-color: #3e3e3e;
+
+}
+
+.video__progress {
+    width: 100%;
+    height: 4px;
+    background-color: #626262;
+    border-radius: 1px;
+    cursor: pointer;
+    padding-left: rem(12px);
+}
+
+.video__progress-current {
+    width: 0;
+    height: rem(4px);
+    position: relative;
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: rem(13px);
+        height: rem(13px);
+        border-radius: 50%;
+        background-color: #626262;
+    }
+}
+
+.video__volume {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.btn-volume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-right: rem(10px);
+    position: relative;
+}
+
+.btn-volume-icon {
+    height: rem(35px);
+    width: rem(35px);
+    fill: #626262;
+    transition: fill .3s;
+
+    &:hover {
+        fill: #d7d7d7;
+        }
+}
+
+.video__volume-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: rem(58px);
+    height: 100%;
+    background-color: #3e3e3e;
+}
+
+.video__volume-scale {
+    width: 100%;
+    height: rem(4px);
+    background-color: #626262;
+    border-radius: 1px;
+    cursor: pointer;
+    padding-left: rem(12px);
+}
+
+
+.video__volume-current {
+    width: 0;
+    height: rem(4px);
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: rem(13px);
+        height: rem(13px);
+        border-radius: 50%;
+        background-color: #626262;
+    }
+}
+
+.line-cross {
+    display: none;
+    position: absolute;
+    height: rem(2px);
+    width: rem(30px);
+    transform: rotate(-45deg);
+    background-color: #c5c5c5;
+}

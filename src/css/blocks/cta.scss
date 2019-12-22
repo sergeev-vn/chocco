@@ -1,0 +1,36 @@
+.cta {
+   width: rem(480px);
+
+   @include tablets {
+      text-align: center;
+      margin-top: rem(20px);
+      max-width: rem(480px);
+      width: 100%;
+  }
+
+}
+
+.cta__desc {
+   font-size: rem(21px);
+   margin-top: 0.5rem;
+   margin-bottom: 2rem;
+
+   @include phones {
+      font-size: rem(19px);
+  }
+
+
+}
+
+.cta__title {
+   font-weight: 600;
+   font-size: rem(60px);
+   text-transform: uppercase;
+   line-height: 1;
+
+   @include phones {
+      font-size: rem(47px);
+  }
+
+
+}

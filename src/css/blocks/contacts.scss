@@ -1,0 +1,15 @@
+.contacts {
+    width: 50%;
+
+    @include phones {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.contacts__address {
+    color: #010101;
+    font-size: rem(21px);
+    line-height: 1.114;
+    font-style: normal;
+}

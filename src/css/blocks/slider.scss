@@ -1,0 +1,194 @@
+.page-slider {
+    background-color: #f8faf9;
+    // background-color: red;
+    background-image: url('../img/bg/slider-fern.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+
+    @include tablets {
+        min-height: rem(815px);
+        position: relative;
+    }
+
+    @include phones {
+        min-height: rem(800px);
+        height: 800px;
+        position: relative;
+    }
+}
+
+.slider {
+    display: flex;
+    max-width: 940px;
+    width: 100%;
+  
+    @include tablets {
+        min-width: 100%;
+        height: 100%;
+    }
+}
+
+.slider__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    position: relative;
+
+    @include tablets {
+        max-width: 595px;
+        position: static;
+    }
+
+    @include phones {
+        max-width: 483px;
+    }
+
+}
+
+.slider__list {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.slider__item {
+    display: inline-flex !important;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    outline: none;
+
+    @include tablets {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.slick-list,
+.slick-track,
+.slick-slide,
+.slick-slide > div  {
+    height: 100%;
+}
+
+
+
+.slider__col {
+    display: flex;
+    flex-direction: column;
+
+    @include tablets {
+        align-items: center;
+    }
+
+    &:first-child {
+        margin-right: rem(63px);
+
+        @include tablets {
+            margin-right: 0;
+        }
+
+        // @include phones {
+        //     padding: 74px 45px 0 45px;
+        //     flex-basis: 45%;
+        // }
+    }
+
+    &:last-child {
+        flex: 1;
+
+        @include tablets {
+         flex: 0;
+        }
+    }
+}
+
+
+.slider__about {
+    display: flex;
+    position: relative;
+
+    @include tablets {
+        position: absolute;
+        top: 2.9%;
+        right: 1%;
+    }
+
+    @include phones {
+        top: 1.2%;
+        right: 1%;
+    }
+}
+
+.slider__pic {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablets {
+        max-width: 65%;
+    }
+
+    @include phones {
+        max-width: 86%;
+    }
+}
+
+.slider__img {
+    max-width: 100%;
+}
+
+.slider__desc-text {
+    color: $gray;
+    font-size: rem(18px);
+    margin-top: rem(11px);
+    max-width: 89%;
+
+    @include tablets {
+        text-align: center;
+        max-width: 100%;
+
+    }
+
+}
+
+.slider__desc-extra {
+    display: flex;
+    margin-top: rem(42px);
+
+    @include tablets {
+        justify-content: center;
+    }
+
+}
+
+.slider__desc-extra-text {
+    font-size: rem(18px);
+    color: $gray;
+    margin-right: rem(55px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.slider__order {
+    margin-top: rem(32px);
+    display: flex;
+    flex-wrap: wrap;
+    @include tablets {
+        justify-content: center;
+        margin-top: rem(40px);
+    }
+
+}
+
+.slider__price {
+    font-size: rem(60px);
+    line-height: 1;
+    font-weight: 200;
+    margin-right: 30px;
+    flex-shrink: 0;
+}

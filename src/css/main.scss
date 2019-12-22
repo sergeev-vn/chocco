@@ -1,0 +1,25 @@
+//colors
+$white: #fff;
+$green: #0f5a47;
+$black: #0d0d0d;
+$gray: #666666;
+
+//media
+@function rem($px) {
+    @return $px / 16px + 0rem;
+  }
+
+  @mixin tablets {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @mixin phones {
+    @media screen and (max-width: 480px) {
+      @content;
+    }
+  } 
+
+//layout
+@import "layout/*.scss";
+@import "blocks/*.scss";

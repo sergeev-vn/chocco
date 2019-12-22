@@ -1,0 +1,104 @@
+.advantages {
+    margin: 3.7rem 0 2.7rem;
+    width: rem(484px);
+
+    @include tablets {
+        margin: rem(40px) 0 rem(53.9px);
+        max-width: rem(567.5px);
+        width: 100%;
+    }
+
+    @include phones {
+        margin: rem(50px) 0 rem(47.5px);
+        max-width: rem(487.2px);
+    }
+
+}
+
+.advantages__list {
+    display: flex;
+    justify-content: space-between;
+
+    @include phones {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+.advantages__item {
+    font-size: rem(16px);
+    display: flex;
+    margin-right: rem(25px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include tablets {
+        margin-right: rem(42px);
+    }
+
+    
+    @include phones {
+        margin-right: rem(37px);
+        font-size: rem(15.9px);
+    }
+
+
+}
+
+.advantages__product-icon,
+.advantages__delivery-icon,
+.advantages__shape-icon {
+    fill:none;
+    stroke-miterlimit: 10;
+    stroke-width: 0.5;
+    stroke: #b0f7ff;
+    margin-right: rem(10px);
+    
+    @include tablets {
+        flex-shrink: 0;
+    }
+
+}
+
+.advantages__product-icon {
+    width: rem(44px);
+    height: rem(41px);
+}
+
+.advantages__delivery-icon {
+    width: rem(50px);
+    height: rem(40px);
+}
+
+.advantages__shape-icon {
+    width: rem(42px);
+    height: rem(42px);
+}
+
+ .advantages__text {
+     width: rem(85px);
+
+     @include tablets {
+        max-width: rem(112.2px);
+        width: 100%;
+    }
+
+    @include phones {
+        width: rem(65.8px);
+    }
+
+}
+
+.advantages__text--width {
+    @include tablets {
+        width: rem(130.2px);
+    }
+
+    @include phones {
+        width: rem(65.8px);
+    }
+
+}

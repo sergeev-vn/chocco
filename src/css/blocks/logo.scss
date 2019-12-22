@@ -1,0 +1,11 @@
+.logo {
+    font-family: Museo;
+    font-size: rem(24px);
+    color: $white;
+    line-height: 0.88;
+
+    @include phones {
+        font-size: rem(25.6px);
+    }
+
+}
