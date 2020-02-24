@@ -1,5 +1,5 @@
 {
-  "name": "chocco-25-11-2019",
+  "name": "chocco",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,18 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sergeev-vn/sergeev-vn.github.io.git"
+    "url": "git+https://github.com/sergeev-vn/chocco.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sergeev-vn/sergeev-vn.github.io/issues"
+    "url": "https://github.com/sergeev-vn/chocco/issues"
   },
-  "homepage": "https://github.com/sergeev-vn/sergeev-vn.github.io#readme",
+  "homepage": "https://github.com/sergeev-vn/chocco#readme",
   "devDependencies": {
-    "@babel/core": "^7.7.7",
-    "@babel/preset-env": "^7.7.7",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
     "browser-sync": "^2.26.7",
     "cross-env": "^6.0.3",
     "gulp": "^4.0.2",

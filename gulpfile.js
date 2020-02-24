@@ -8,7 +8,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const gcmq = require('gulp-group-css-media-queries');
 const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
-const buble = require('gulp-buble');
+const babel  = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const gulpif = require('gulp-if');
 
@@ -60,7 +60,9 @@ task('scripts', () => {
     return src([...JS_LIBS, `${SRC_PATH}/js/*.js`])
     .pipe(gulpif(env === 'dev', sourcemaps.init()))
     .pipe(concat('main.js', { newLine: ';'}))
-    .pipe(gulpif(env === 'prod', buble()))
+    .pipe(gulpif(env === 'prod', babel({
+        presets: ['@babel/env']
+    })))
     .pipe(gulpif(env === 'prod', uglify()))
     .pipe(gulpif(env === 'dev', sourcemaps.write()))
     .pipe(dest(DIST_PATH))
